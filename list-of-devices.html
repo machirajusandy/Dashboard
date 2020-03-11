@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from admincast.com/adminca/preview/admin_2/html/datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jan 2020 10:31:20 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <!-- PLUGINS STYLES-->
+    <link href="assets/css/datatables.min.css" rel="stylesheet" />
+    <!-- THEME STYLES-->
+    <link href="assets/css/main.min.css" rel="stylesheet" />
+    <!-- PAGE LEVEL STYLES-->
+    <style>
+        .pad-l5{padding-left: 15px}
+        .ti-trash{color: #f15722}
+        .ti-plus{color: #9aca3c}
+        .ti-pencil{color: #62acc9}
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- START HEADER-->
+        <header class="header">
+            <!-- START TOP-LEFT TOOLBAR-->
+            <ul class="nav navbar-toolbar">
+                <li>
+                    <a class="nav-link sidebar-toggler js-sidebar-toggler" href="javascript:;">
+                        <i class="ti-home"></i>
+                    </a>
+                </li>
+                <li class="dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle"  href="index.html"><img src="assets/logo.jfif" alt="logo" class="logo"></a>
+                </li>
+            </ul>
+            <!-- END TOP-LEFT TOOLBAR-->
+        </header>
+        <!-- END HEADER-->
+        <!-- START SIDEBAR-->
+       <nav class="page-sidebar">
+            <ul class="side-menu metismenu scroller">
+                
+                        <li>
+                            <a href="list-of-devices.html">List of devices</a>
+                        </li>
+                        <li>
+                            <a href="dash-board.html">Dash boards</a>
+                        </li>
+                        <li>
+                            <a href="system-setting.html">System settings</a>
+                        </li>
+                        <li>
+                            <a href="app-details.html">App details</a>
+                        </li>
+                    </ul>
+        </nav>
+        <!-- END SIDEBAR-->
+        <div class="content-wrapper">
+            <!-- START PAGE CONTENT-->
+            <div class="page-heading">
+                <h1 class="page-title">Devices Table</h1>
+            </div>
+            <div class="page-content fade-in-up">
+                <div class="ibox">
+                    <div class="ibox-body">
+                        <h5 class="font-strong mb-4">Devices Table</h5>
+                        <div class="flexbox mb-4">
+                            <div class="flexbox">
+                                <label class="mb-0 mr-2">Devices:</label>
+                                <select class="selectpicker show-tick form-control" id="type-filter" title="Please select" data-style="btn-solid" data-width="150px">
+                                    <option value="">All</option>
+                                    <option>Ios</option>
+                                    <option>Android</option>
+                                    <option>MAC OS</option>
+                                    <option>Windows</option>
+                                </select>
+                            </div>
+                            <div class="input-group-icon input-group-icon-left mr-3">
+                                <span class="input-icon input-icon-right font-16"><i class="ti-search"></i></span>
+                                <input class="form-control form-control-rounded form-control-solid" id="key-search" type="text" placeholder="Search ...">
+                            </div>
+                        </div>
+                        <div class="table-responsive row">
+                            <table class="table table-bordered table-hover" id="datatable">
+                                <thead class="thead-default thead-lg">
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Device ID</th>
+                                        <th>Device Type</th>
+                                        <th>Device Score</th>
+                                        <th>Last Seen</th>
+                                        <th class="no-sort"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <a href="javascript:;">#1254</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Ios</span>
+                                        </td>
+                                        <td>9</td>
+                                        <td>Yesterday</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <a href="javascript:;">#1253</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-primary badge-pill">Android</span>
+                                        </td>
+                                        <td>6</td>
+                                        <td>Yesterday</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <a href="javascript:;">#1252</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Ios</span>
+                                        </td>
+                                        <td>5</td>
+                                        <td>Today</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <a href="javascript:;">#1251</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-danger badge-pill">Windows</span>
+                                        </td>
+                                        <td>3</td>
+                                        <td>4 days ago</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <a href="javascript:;">#1250</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">MAC OS</span>
+                                        </td>
+                                        <td>9</td>
+                                        <td>Today</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>
+                                            <a href="javascript:;">#1249</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Ios</span>
+                                        </td>
+                                        <td>10</td>
+                                        <td>Yesterday</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>
+                                            <a href="javascript:;">#1248</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-danger badge-pill">Windows</span>
+                                        </td>
+                                        <td>6</td>
+                                        <td>Today</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>
+                                            <a href="javascript:;">#1247</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-primary badge-pill">Android</span>
+                                        </td>
+                                        <td>8</td>
+                                        <td>1 week Ago</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>
+                                            <a href="javascript:;">#1246</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-primary badge-pill">Android</span>
+                                        </td>
+                                        <td>9</td>
+                                        <td>1 week Ago</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>
+                                            <a href="javascript:;">#1245</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-danger badge-pill">Windows</span>
+                                        </td>
+                                        <td>4</td>
+                                        <td>1 month Ago</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>
+                                            <a href="javascript:;">#1244</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-danger badge-pill">Windows</span>
+                                        </td>
+                                        <td>5</td>
+                                        <td>1 week Ago</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>
+                                            <a href="javascript:;">#1243</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">MAC OS</span>
+                                        </td>
+                                        <td>1</td>
+                                        <td>1 week Ago</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>
+                                            <a href="javascript:;">#1242</a>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">MAC OS</span>
+                                        </td>
+                                        <td>4</td>
+                                        <td>2 week Ago</td>
+                                        <td>
+                                            <a class="text-muted font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-plus"></i></a>
+                                            <a class="text-muted font-16 pad-l5" href="javascript:;"><i class="ti-pencil"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- CORE PLUGINS-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <!-- PAGE LEVEL PLUGINS-->
+    <script src="assets/js/datatables.min.js"></script>
+    <!-- CORE SCRIPTS-->
+    <script src="assets/js/app.min.js"></script>
+    <!-- PAGE LEVEL SCRIPTS-->
+    <script>
+        $(function() {
+            $('#datatable').DataTable({
+                pageLength: 10,
+                fixedHeader: true,
+                responsive: true,
+                "sDom": 'rtip',
+                columnDefs: [{
+                    targets: 'no-sort',
+                    orderable: false
+                }]
+            });
+
+            var table = $('#datatable').DataTable();
+            $('#key-search').on('keyup', function() {
+                table.search(this.value).draw();
+            });
+            $('#type-filter').on('change', function() {
+                table.column(2).search($(this).val()).draw();
+            });
+        });
+    </script>
+</body>
+
+</html>

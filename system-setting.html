@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from admincast.com/adminca/preview/admin_2/html/datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jan 2020 10:31:20 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <!-- PLUGINS STYLES-->
+    <link href="assets/css/datatables.min.css" rel="stylesheet" />
+    <!-- THEME STYLES-->
+    <link href="assets/css/main.min.css" rel="stylesheet" />
+    <!-- PAGE LEVEL STYLES-->
+    <style>
+        .pad-l5{padding-left: 15px}
+        .down-btn{padding: 1vh;font-size: 16px;background: #BDDA7B;color: #000;text-align: left;line-height: 1.25}
+        .down-btn:hover{padding: 1vh;font-size: 16px;background: #9ACA3C;color: #000; border:1px solid #CCE4ED;  text-align: left;line-height: 1.25}
+        .ibox-body{background: #DDEBBD}
+        .text-muted{color: #000!important}
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- START HEADER-->
+        <header class="header">
+            <!-- START TOP-LEFT TOOLBAR-->
+            <ul class="nav navbar-toolbar">
+                <li>
+                    <a class="nav-link sidebar-toggler js-sidebar-toggler" href="javascript:;">
+                        <i class="ti-home"></i>
+                    </a>
+                </li>
+                <li class="dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle"  href="index.html"><img src="assets/logo.jfif" alt="logo" class="logo"></a>
+                </li>
+            </ul>
+            <!-- END TOP-LEFT TOOLBAR-->
+        </header>
+        <!-- END HEADER-->
+        <!-- START SIDEBAR-->
+        <nav class="page-sidebar">
+            <ul class="side-menu metismenu scroller">
+                
+                        <li>
+                            <a href="list-of-devices.html">List of devices</a>
+                        </li>
+                        <li>
+                            <a href="dash-board.html">Dash boards</a>
+                        </li>
+                        <li>
+                            <a href="system-setting.html">System settings</a>
+                        </li>
+                        <li>
+                            <a href="app-details.html">App details</a>
+                        </li>
+                    </ul>
+        </nav>
+        <!-- END SIDEBAR-->
+        <div class="content-wrapper">
+            <!-- START PAGE CONTENT-->
+            <div class="page-heading">
+                <h1 class="page-title">System setting</h1>
+            </div>
+            <div class="page-content fade-in-up">
+                <div class="ibox">
+                    <div class="ibox-body">
+                        <form>
+                            <div class="row">
+                                <div class="text-muted mb-4">Modify devices</div>
+                                <div class="col-lg-12">
+                                <div class="row">
+                        <div class="col-sm-4 form-group mb-4">
+                                            <input class="form-control form-control-solid" type="text" placeholder="Add device">
+                                        </div>
+                                <div class="col-sm-2">
+                                    <div class="down-btn">
+                                        <div class="row">
+                                        <div class="col-2"><i class="ti-plus"></i></div>
+                                        <div class="col-10">
+                                            Add Device
+                                            </div></div>
+                                         </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="down-btn">
+                                        <div class="row">
+                                        <div class="col-2">
+                                        <i class="ti-trash"></i></div>
+                                        <div class="col-10">
+                                            Delete Device
+                                            </div></div> </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="down-btn">
+                                        <div class="row">
+                                        <div class="col-2">
+                                        <i class="ti-pencil"></i></div>
+                                        <div class="col-10">
+                                            Change Device
+                                            </div></div> </div>
+                                </div>
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                <div class="text-muted mb-4">Edit chart</div>
+                                <div class="row">
+                        <div class="col-sm-4 form-group mb-4">
+                                            <input class="form-control form-control-solid" type="text" placeholder="Chart ID">
+                                        </div>
+                                <div class="col-sm-2">
+                                    <div class="down-btn">
+                                        <div class="row">
+                                        <div class="col-2"><i class="ti-plus"></i></div>
+                                        <div class="col-10">Edit</div>
+                                        </div>
+                                         </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="down-btn">
+                                        <div class="row">
+                                        <div class="col-2"><i class="ti-trash"></i></div>
+                                        <div class="col-10">Delete</div>
+                                        </div>
+                                         </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="down-btn">
+                                        <div class="row">
+                                        <div class="col-2"><i class="ti-pencil"></i></div>
+                                        <div class="col-10">Modify</div>
+                                        </div>
+                                         </div>
+                                </div>
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                <div class="text-muted mb-4">Filter Data</div>
+                                <div class="row">
+                        <div class="col-sm-4 form-group mb-4">
+                                            <input class="form-control form-control-solid" type="text" placeholder="Data ID">
+                                        </div>
+                                <div class="col-sm-2">
+                                    <div class="down-btn"><div class="row">
+                                        <div class="col-2"><i class="ti-download"></i></div>
+                                        <div class="col-10">Export as PDF</div>
+                                        </div></div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="down-btn"><div class="row">
+                                        <div class="col-2"><i class="ti-download"></i></div>
+                                        <div class="col-10">Export as Excel</div>
+                                        </div></div>
+                                </div>
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                <div class="text-muted mb-4">Restrain Numer of users</div>
+                                <div class="row">
+                        <div class="col-sm-8 form-group mb-4">
+                                            <input class="form-control form-control-solid" type="text" placeholder="Number of users">
+                                        </div>
+                                <div class="col-sm-4">
+                                    <div class="down-btn">
+                                        <div class="row">
+                                        <div class="col-2"><i class="ti-save"></i></div>
+                                        <div class="col-10">Submit</div></div>
+                                        </div>
+                                </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                <div class="text-muted mb-4">Alert Users</div>
+                                <div class="row">
+                        <div class="col-sm-8 form-group mb-4">
+                                            <input class="form-control form-control-solid" type="text" placeholder="User ID">
+                                        </div>
+                                <div class="col-sm-4">
+                                    <div class="down-btn">
+                                        <div class="row">
+                                        <div class="col-2"><i class="ti-save"></i></div>
+                                        <div class="col-10">Alert user</div></div></div>
+                                </div>
+                                    </div>
+                                </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- CORE PLUGINS-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <!-- PAGE LEVEL PLUGINS-->
+    <!-- CORE SCRIPTS-->
+    <script src="assets/js/app.min.js"></script>
+    <!-- PAGE LEVEL SCRIPTS-->
+</body>
+
+</html>

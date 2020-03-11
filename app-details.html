@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from admincast.com/adminca/preview/admin_2/html/datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jan 2020 10:31:20 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <!-- PLUGINS STYLES-->
+    <link href="assets/css/datatables.min.css" rel="stylesheet" />
+    <!-- THEME STYLES-->
+    <link href="assets/css/main.min.css" rel="stylesheet" />
+    <!-- PAGE LEVEL STYLES-->
+    <style>
+        .pad-l5{padding-left: 15px}
+        .ti-trash{color: #f15722}
+        .ti-plus{color: #9aca3c}
+        .ti-pencil{color: #62acc9}
+        .down-btn{padding: 1vh;font-size: 16px;background: #BDDA7B;color: #000;text-align: left;line-height: 1.25}
+        .down-btn:hover{padding: 1vh;font-size: 16px;background: #9ACA3C;color: #000; border:1px solid #CCE4ED;  text-align: left;line-height: 1.25}
+        .bootstrap-select>.dropdown-toggle.bs-placeholder,.bootstrap-select>.dropdown-toggle.btn-solid{
+    max-width: max-content;}
+        .bootstrap-select.btn-group:not(.input-group-btn){background: transparent}
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- START HEADER-->
+        <header class="header">
+            <!-- START TOP-LEFT TOOLBAR-->
+            <ul class="nav navbar-toolbar">
+                <li>
+                    <a class="nav-link sidebar-toggler js-sidebar-toggler" href="javascript:;">
+                        <i class="ti-home"></i>
+                    </a>
+                </li>
+                <li class="dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle"  href="index.html"><img src="assets/logo.jfif" alt="logo" class="logo"></a>
+                </li>
+            </ul>
+            <!-- END TOP-LEFT TOOLBAR-->
+        </header>
+        <!-- END HEADER-->
+        <!-- START SIDEBAR-->
+       <nav class="page-sidebar">
+            <ul class="side-menu metismenu scroller">
+                
+                        <li>
+                            <a href="list-of-devices.html">List of devices</a>
+                        </li>
+                        <li>
+                            <a href="dash-board.html">Dash boards</a>
+                        </li>
+                        <li>
+                            <a href="system-setting.html">System settings</a>
+                        </li>
+                        <li>
+                            <a href="app-details.html">App details</a>
+                        </li>
+                    </ul>
+        </nav>
+        <!-- END SIDEBAR-->
+        <div class="content-wrapper">
+            <!-- START PAGE CONTENT-->
+            <div class="page-heading">
+                <h1 class="page-title">App Details</h1>
+            </div>
+            <div class="page-content fade-in-up">
+                <div class="ibox">
+                    <div class="ibox-body">
+                        <div class="row">
+                        <div class="col-lg-12">
+                        <div class="table-responsive row">
+                            <table class="table table-bordered table-hover" id="datatable">
+                                <thead class="thead-default thead-lg">
+                                    <tr>
+                                        <th>
+                                <select class="selectpicker show-tick form-control" id="type-filter" title="Application" data-style="btn-solid" >
+                                    <option value="">All</option>
+                                    <option>Ios</option>
+                                    <option>Android</option>
+                                    <option>MAC OS</option>
+                                    <option>Windows</option>
+                                </select></th>
+                                        <th>Installation time stamps</th>
+                                        <th>Last update timestamp</th>
+                                        <th>Installation file hash</th>
+                                        <th>App name</th>
+                                        <th>App version</th>
+                                        <th>App Permission</th>
+                                        <th>App signing certificate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Ios</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1250</td>
+                                        <td>App1</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#124</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Android</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1253</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#125</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Ios</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1252</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#126</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Windows</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1251</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#128</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">MAC OS</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1250</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#129</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Ios</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1249</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#130</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Windows</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1248</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#131</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Android</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1247</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#132</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Windows</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1253</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#134</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">MAC OS</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1255</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#135</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Ios</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1257</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#136</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Windows</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1258</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#137</td>
+                                    </tr>
+                                     <tr>
+                                        <td>
+                                            <span class="badge badge-success badge-pill">Android</span>
+                                        </td>
+                                        <td>5:30 PM</td>
+                                        <td>
+                                            5:30 PM
+                                        </td>
+                                        <td>#1267</td>
+                                        <td>App2</td>
+                                        <td>1.0v</td>
+                                        <td>True</td>
+                                        <td>C#138</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div></div>
+                            </div>
+                    </div>
+                    <div class="ibox-body">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-3">
+                            <div class="down-btn">
+                                        <div class="row">
+                                        <div class="col-2"><i class="ti-save"></i></div>
+                                        <div class="col-10">Submit</div></div>
+                                        </div>
+                            </div>
+                            <div class="col-lg-9">
+                        <div class="flexbox mb-4 range">
+                            <div class="flexbox">
+                                <label class="mb-0 mr-2">Select Data Range:</label>
+                                <select class="selectpicker show-tick form-control" id="type-filter" title="Please select" data-style="btn-solid" data-width="150px">
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
+                                    <option>550</option>
+                                    <option>600</option>
+                                    <option>650</option>
+                                    <option>700</option>
+                                </select>
+                            </div>
+                            <label class="mb-0 mr-2"> to </label>
+                            <select class="selectpicker show-tick form-control" id="type-filter" title="Please select" data-style="btn-solid" data-width="150px">
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
+                                    <option>550</option>
+                                    <option>600</option>
+                                    <option>650</option>
+                                    <option>700</option>
+                                </select>
+                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- CORE PLUGINS-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <!-- PAGE LEVEL PLUGINS-->
+    <script src="assets/js/datatables.min.js"></script>
+    <!-- CORE SCRIPTS-->
+    <script src="assets/js/app.min.js"></script>
+    <!-- PAGE LEVEL SCRIPTS-->
+    <script>
+        $(function() {
+            $('#datatable').DataTable({
+                pageLength: 10,
+                fixedHeader: true,
+                responsive: true,
+                "sDom": 'rtip',
+                columnDefs: [{
+                    targets: 'no-sort',
+                    orderable: false
+                }]
+            });
+
+            var table = $('#datatable').DataTable();
+            $('#key-search').on('keyup', function() {
+                table.search(this.value).draw();
+            });
+            $('#type-filter').on('change', function() {
+                table.column(0).search($(this).val()).draw();
+            });
+        });
+    </script>
+</body>
+
+</html>

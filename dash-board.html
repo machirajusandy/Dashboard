@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <!-- PLUGINS STYLES-->
+    <!-- THEME STYLES-->
+    <link href="assets/css/main.min.css" rel="stylesheet" />
+    <!-- PAGE LEVEL STYLES-->
+    <style>
+        .box-1{background:#007bff;width: 100%;height:50px}
+        .box-2{background:#28a745;width: 100%;height:50px}
+        .box-3{background:#ff6600;width: 100%;height:50px}
+        .split-r{padding-bottom: 3vh;padding-top: 3vh}
+        .t-center{text-align: center;margin: auto;padding-bottom: 5vh}
+        .down-btn{padding: 1vh;font-size: 16px;background: #BDDA7B;color: #000;text-align: left;line-height: 1.25}
+        .down-btn:hover{padding: 1vh;font-size: 16px;background: #9ACA3C;color: #000; border:1px solid #CCE4ED;  text-align: left;line-height: 1.25}
+        .range{margin-top: 5vh}
+        .bootstrap-select.btn-group.show-tick .dropdown-menu li a span.text,.bootstrap-select.btn-group .dropdown-toggle .filter-option{
+		font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+	}
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- START HEADER-->
+        <header class="header">
+            <!-- START TOP-LEFT TOOLBAR-->
+            <ul class="nav navbar-toolbar">
+                <li>
+                    <a class="nav-link sidebar-toggler js-sidebar-toggler" href="javascript:;">
+                        <i class="ti-home"></i>
+                    </a>
+                </li>
+                <li class="dropdown mega-menu">
+                    <a class="nav-link dropdown-toggle"  href="index.html"><img src="assets/logo.jfif" alt="logo" class="logo"></a>
+                </li>
+            </ul>
+            <!-- END TOP-LEFT TOOLBAR-->
+        </header>
+        <!-- END HEADER-->
+        <!-- START SIDEBAR-->
+         <nav class="page-sidebar">
+            <ul class="side-menu metismenu scroller">
+                
+                        <li>
+                            <a href="list-of-devices.html">List of devices</a>
+                        </li>
+                        <li>
+                            <a href="dash-board.html">Dash boards</a>
+                        </li>
+                        <li>
+                            <a href="system-setting.html">System settings</a>
+                        </li>
+                        <li>
+                            <a href="app-details.html">App details</a>
+                        </li>
+                    </ul>
+        </nav>
+        <!-- END SIDEBAR-->
+        <div class="content-wrapper">
+            <!-- START PAGE CONTENT-->
+            <div class="page-content fade-in-up">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox">
+                            <div class="ibox-body">
+                                <div class="row">
+                                <div class="col-lg-8">
+                                    <canvas id="chBar" style="height:260px;"></canvas>
+                                </div>
+                                <div class="col-lg-4">
+                                <h2 class="text-success t-center">Graph Data</h2>
+                                    <div class="row split-r">
+                                    <div class="col-lg-4">
+                                        <div class="box-1"></div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <div class="text-muted">Non-Rooted Devices</div>
+                                    </div>
+                                        </div>
+                                    <div class="row split-r">
+                                    <div class="col-lg-4">
+                                        <div class="box-2"></div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <div class="text-muted">Rooted Devices</div>
+                                    </div>
+                                        </div>
+                                    <div class="row split-r">
+                                    <div class="col-lg-4">
+                                        <div class="box-3"></div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <div class="text-muted">Defective Devices</div>
+                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ibox-body">
+                                <div class="row">
+                                <div class="col-lg-8">
+                                   <canvas id="chLine" style="height:260px;"></canvas>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-lg-2">
+                        <div class="flexbox mb-4 range">
+                            <div class="flexbox">
+                                <select class="selectpicker show-tick form-control" id="type-filter" title="Please select" data-style="btn-solid" data-width="150px">
+                                    <option>&#xf1c1; PDF</option>
+                                    <option>&#xf1c3; EXCEL</option>
+                                    <option>&#xf56e; EXPORT</option>
+                                    <option><p>&#xf02f;</p> PRINT</option>
+                                </select>
+                            </div>
+                                    </div><div class="down-btn">
+                                        <div class="row">
+                                        <div class="col-2"><i class="ti-save"></i></div>
+                                        <div class="col-10">Submit</div></div>
+                                        </div>
+                                    </div>
+                                <div class="col-lg-6">
+                                    
+                        <div class="flexbox mb-4 range">
+                            <div class="flexbox">
+                                <label class="mb-0 mr-2">Select Data Range:</label>
+                                <select class="selectpicker show-tick form-control" id="type-filter" title="Please select" data-style="btn-solid" data-width="150px">
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
+                                    <option>550</option>
+                                    <option>600</option>
+                                    <option>650</option>
+                                    <option>700</option>
+                                </select>
+                            </div>
+                            <label class="mb-0 mr-2"> to </label>
+                            <select class="selectpicker show-tick form-control" id="type-filter" title="Please select" data-style="btn-solid" data-width="150px">
+                                    <option>250</option>
+                                    <option>300</option>
+                                    <option>350</option>
+                                    <option>400</option>
+                                    <option>450</option>
+                                    <option>500</option>
+                                    <option>550</option>
+                                    <option>600</option>
+                                    <option>650</option>
+                                    <option>700</option>
+                                </select>
+                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- BEGIN PAGA BACKDROPS-->
+    <div class="sidenav-backdrop backdrop"></div>
+    <div class="preloader-backdrop">
+        <div class="page-preloader">Loading</div>
+    </div>
+    <!-- END PAGA BACKDROPS-->
+    <!-- CORE PLUGINS-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <!-- PAGE LEVEL PLUGINS-->
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.min.js"></script>
+    <!-- CORE SCRIPTS-->
+    <script src="assets/js/app.min.js"></script>
+    <!-- PAGE LEVEL SCRIPTS-->
+    <script src="assets/js/dashboard.js"></script>
+    <script>
+  /* chart.js chart examples */
+
+// chart colors
+var colors = ['#007bff','#28a745','#ff6600','#c3e6cb','#dc3545','#6c757d'];
+
+/* large line chart */
+var chLine = document.getElementById("chLine");
+var chartData = {
+  labels: ["S", "M", "T", "W", "T", "F", "S"],
+  datasets: [{
+    data: [589, 445, 483, 503, 689, 692, 634],
+    backgroundColor: 'transparent',
+    borderColor: colors[0],
+    borderWidth: 4,
+    pointBackgroundColor: colors[0]
+  },
+  {
+     data: [639, 465, 493, 478, 589, 632, 674],
+     backgroundColor: 'transparent',
+     borderColor: colors[1],
+     borderWidth: 4,
+     pointBackgroundColor: colors[1]
+   },
+  {
+     data: [609, 365, 693, 278, 509, 612, 654],
+     backgroundColor: 'transparent',
+     borderColor: colors[2],
+     borderWidth: 4,
+     pointBackgroundColor: colors[2]
+   }
+  ]
+};
+if (chLine) {
+  new Chart(chLine, {
+  type: 'line',
+  data: chartData,
+  options: {
+    scales: {
+      xAxes: [{
+        ticks: {
+          beginAtZero: false
+        }
+      }]
+    },
+    legend: {
+      display: false
+    },
+    responsive: true
+  }
+  });
+}
+
+/* bar chart */
+var chBar = document.getElementById("chBar");
+if (chBar) {
+  new Chart(chBar, {
+  type: 'bar',
+  data: {
+    labels: ["S", "M", "T", "W", "T", "F", "S"],
+    datasets: [{
+      data: [589, 445, 483, 503, 689, 692, 634],
+      backgroundColor: colors[0]
+    },
+    {
+      data: [639, 465, 493, 478, 589, 632, 674],
+      backgroundColor: colors[1]
+    },
+    {
+      data: [609, 565, 413, 470, 389, 232, 774],
+      backgroundColor: colors[2]
+    }]
+  },
+  options: {
+    legend: {
+      display: false
+    },
+    scales: {
+      xAxes: [{
+        barPercentage: 0.4,
+        categoryPercentage: 0.5
+      }]
+    }
+  }
+  });
+}
+
+/* 3 line charts */
+var lineOptions = {
+    legend:{display:false},
+    tooltips:{interest:false,bodyFontSize:11,titleFontSize:11},
+    scales:{
+        xAxes:[
+            {
+                ticks:{
+                    display:false
+                },
+                gridLines: {
+                    display:false,
+                    drawBorder:false
+                }
+            }
+        ],
+        yAxes:[{display:false}]
+    },
+    layout: {
+        padding: {
+            left: 6,
+            right: 6,
+            top: 4,
+            bottom: 6
+        }
+    }
+};
+
+var chLine1 = document.getElementById("chLine1");
+if (chLine1) {
+  new Chart(chLine1, {
+      type: 'line',
+      data: {
+          labels: ['Jan','Feb','Mar','Apr','May'],
+          datasets: [
+            {
+              backgroundColor:'#ffffff',
+              borderColor:'#ffffff',
+              data: [10, 11, 4, 11, 4],
+              fill: false
+            }
+          ]
+      },
+      options: lineOptions
+  });
+}
+var chLine2 = document.getElementById("chLine2");
+if (chLine2) {
+  new Chart(chLine2, {
+      type: 'line',
+      data: {
+          labels: ['A','B','C','D','E'],
+          datasets: [
+            {
+              backgroundColor:'#ffffff',
+              borderColor:'#ffffff',
+              data: [4, 5, 7, 13, 12],
+              fill: false
+            }
+          ]
+      },
+      options: lineOptions
+  });
+}
+
+var chLine3 = document.getElementById("chLine3");
+if (chLine3) {
+  new Chart(chLine3, {
+      type: 'line',
+      data: {
+          labels: ['Pos','Neg','Nue','Other','Unknown'],
+          datasets: [
+            {
+              backgroundColor:'#ffffff',
+              borderColor:'#ffffff',
+              data: [13, 15, 10, 9, 14],
+              fill: false
+            }
+          ]
+      },
+      options: lineOptions
+  });
+}
+
+    </script>
+</body>
+</html>
